@@ -150,6 +150,9 @@ span{
     body{
         overflow: hidden;
     }
+    .container{
+        margin-top: 2rem;
+    }
     .top{
         display: flex;
         flex-direction: row;
@@ -166,6 +169,8 @@ span{
     .description{
         text-align: left;
         width: 85%;
+        margin-top: 2rem;
+        font-weight: 500;
     }
     .rating{
         font-weight: 700;
@@ -191,6 +196,9 @@ span{
     }
     .card img{
         width: 15%;
+    }
+    .quote{
+        font-weight: 500;
     }
     /* ADDED SPACING FOR STAGGER EFFECT ON STAR CARDS */
     .one{
