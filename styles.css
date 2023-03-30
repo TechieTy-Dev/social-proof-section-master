@@ -150,9 +150,6 @@ span{
     body{
         overflow: hidden;
     }
-    .container{
-        margin-top: 2rem;
-    }
     .top{
         display: flex;
         flex-direction: row;
