@@ -7,7 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar{
+    width: 0px;
+}
 :root{
     /* Colors */
     --dark-magenta: hsl(300, 43%, 22%) ;
@@ -15,11 +17,11 @@
     --gray-magenta: hsl(303, 10%, 53%);
     --light-magenta: hsl(300, 24%, 96%);
     --white: hsl(0, 0%, 100%);
-
 }
 body{
     font-family: 'League Spartan', sans-serif;
     font-size: 15px;
+
 }
 /* HEADINGS and TEXT */
 h1{
@@ -51,7 +53,7 @@ h3{
 .container{
     min-height: 100vh;
     display: flex;
-   
+   position: relative;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -61,6 +63,23 @@ h3{
     margin: 0 auto;
     margin-top: 3rem;
     margin-bottom: 4rem;
+}
+
+.bg-circle{
+    position: absolute;
+    top: -60px;
+    left: -200px;
+}
+.bg-circle-two{
+    position: absolute;
+    bottom: 250px;
+    right: -20px;
+}
+.bg-circle-desktop{
+    display: none;
+}
+.bg-circle-two-desktop{
+    display: none;
 }
 /* STAR CONTAINER */
 .star-container{
@@ -105,7 +124,7 @@ h3{
     display: flex;
 }
 .card-top img{
-    width: 13%;
+    width: 15%;
     border-radius: 50%;
     
 }
@@ -128,6 +147,9 @@ span{
 
 /* DESKTOP VERSION */
 @media screen and (min-width: 767px) {
+    body{
+        overflow: hidden;
+    }
     .top{
         display: flex;
         flex-direction: row;
@@ -192,5 +214,24 @@ span{
     .stagger-three{
         margin-top:4rem;
         height: 15rem;
+    }
+
+    .bg-circle{
+        display: none;
+    }
+    .bg-circle-two{
+        display: none;
+    }
+    .bg-circle-desktop{
+        display: block;
+        position: absolute;
+        top: -100px;
+        left: 0;
+    }
+    .bg-circle-two-desktop{
+        display: block;
+        position: absolute;
+        bottom:0;
+        right: 0;
     }
 }
